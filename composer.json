@@ -1,6 +1,6 @@
 {
-    "name": "jstewart/robo-drupalvm",
-    "description": "Drupal VM tasks Robo Task Runner",
+    "name": "jstewart/robo-vagrant",
+    "description": "Vagrant tasks for Robo Task Runner",
     "license": "MIT",
     "authors": [
         {
