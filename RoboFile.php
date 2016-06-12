@@ -49,6 +49,20 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
+     * Vagrant Global Status task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/GlobalStatus.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
+    public function vagrantGlobalStatus()
+    {
+        $result = $this->taskVagrantGlobalStatus()->run();
+        return $result;
+    }
+
+    /**
      * Vagrant Help task.
      *
      * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Status.php
