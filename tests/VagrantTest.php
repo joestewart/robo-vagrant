@@ -1,6 +1,6 @@
 <?php
 
-class DrushStackTest extends \PHPUnit_Framework_TestCase
+class VagrantTest extends \PHPUnit_Framework_TestCase
 {
     use \JoeStewart\Robo\Task\Vagrant\loadTasks;
 
