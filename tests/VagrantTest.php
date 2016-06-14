@@ -22,4 +22,13 @@ class VagrantTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testVagrantSshCommand()
+    {
+        $command = $this->taskVagrantSsh('/usr/bin/vagrant')
+            ->plain()
+            ->command('ls -l')
+            ->getCommand();
+        $expected = '/usr/bin/vagrant ssh --plain --command "ls -l"';
+        $this->assertEquals($expected, $command);
+    }
 }
