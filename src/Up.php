@@ -19,6 +19,30 @@ class Up extends Base
 {
     protected $action = 'up';
 
+    /**
+     * adds `no-provision` option to vagrant up
+     *
+     * @return $this
+     */
+    public function no_provision()
+    {
+        $this->option('--no-provision');
+
+        return $this;
+    }
+
+    /**
+     * adds `provision` option to vagrant up
+     *
+     * @return $this
+     */
+    public function provision()
+    {
+        $this->option('--provision');
+
+        return $this;
+    }
+
     public function run()
     {
         $this->printTaskInfo('Vagrant up: ' . $this->arguments);

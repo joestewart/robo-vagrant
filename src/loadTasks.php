@@ -17,6 +17,7 @@ trait loadTasks
                 'taskVagrantDestroy' => Destroy::class,
                 'taskVagrantGlobalStatus' => GlobalStatus::class,
                 'taskVagrantHelp' => Help::class,
+                'taskVagrantProvision' => Provision::class,
                 'taskVagrantSsh' => Ssh::class,
                 'taskVagrantSshConfig' => SshConfig::class,
                 'taskVagrantStatus' => Status::class,
@@ -64,6 +65,14 @@ trait loadTasks
      */
     protected function taskVagrantListCommands($pathToVagrant = null) {
         return new ListCommands($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return Provision
+     */
+    protected function taskVagrantProvision($pathToVagrant = null) {
+        return new Provision($pathToVagrant);
     }
 
     /**

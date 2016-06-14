@@ -70,9 +70,9 @@ class RoboFile extends \Robo\Tasks
      *
      * @return object Result
      */
-    public function vagrantHelp()
+    public function vagrantHelp($arg = '')
     {
-        $result = $this->taskVagrantHelp()->run();
+        $result = $this->taskVagrantHelp()->arg($arg)->run();
         return $result;
     }
 
@@ -87,6 +87,20 @@ class RoboFile extends \Robo\Tasks
     public function vagrantListCommands($arg = '')
     {
         $result = $this->taskVagrantListCommands()->arg($arg)->run();
+        return $result;
+    }
+
+    /**
+     * Vagrant provision task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Provision.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
+    public function vagrantProvision()
+    {
+        $result = $this->taskVagrantProvision()->run();
         return $result;
     }
 
