@@ -22,6 +22,16 @@ class VagrantTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testVagrantPortCommand()
+    {
+        $command = $this->taskVagrantPort('/usr/bin/vagrant')
+            ->machine_readable()
+            ->guest('22')
+            ->getCommand();
+        $expected = '/usr/bin/vagrant port --machine-readable --guest 22';
+        $this->assertEquals($expected, $command);
+    }
+
     public function testVagrantSshCommand()
     {
         $command = $this->taskVagrantSsh('/usr/bin/vagrant')

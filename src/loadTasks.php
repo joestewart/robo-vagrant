@@ -20,6 +20,7 @@ trait loadTasks
                 'taskVagrantHelp' => Help::class,
                 'taskVagrantInit' => Init::class,
                 'taskVagrantPlugin' => Plugin::class,
+                'taskVagrantPort' => Port::class,
                 'taskVagrantProvision' => Provision::class,
                 'taskVagrantReload' => Reload::class,
                 'taskVagrantSsh' => Ssh::class,
@@ -93,6 +94,14 @@ trait loadTasks
      */
     protected function taskVagrantPlugin($pathToVagrant = null) {
         return new Plugin($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return Plugin
+     */
+    protected function taskVagrantPort($pathToVagrant = null) {
+        return new Port($pathToVagrant);
     }
 
     /**

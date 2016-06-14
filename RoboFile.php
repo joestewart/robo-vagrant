@@ -133,6 +133,20 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
+     * Vagrant Port task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Port.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
+    public function vagrantPort()
+    {
+        $result = $this->taskVagrantPort()->run();
+        return $result;
+    }
+
+    /**
      * Vagrant provision task.
      *
      * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Provision.php
