@@ -21,6 +21,7 @@ trait loadTasks
                 'taskVagrantInit' => Init::class,
                 'taskVagrantPlugin' => Plugin::class,
                 'taskVagrantProvision' => Provision::class,
+                'taskVagrantReload' => Reload::class,
                 'taskVagrantSsh' => Ssh::class,
                 'taskVagrantSshConfig' => SshConfig::class,
                 'taskVagrantStatus' => Status::class,
@@ -100,6 +101,14 @@ trait loadTasks
      */
     protected function taskVagrantProvision($pathToVagrant = null) {
         return new Provision($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return Ssh
+     */
+    protected function taskVagrantReload($pathToVagrant = null) {
+        return new Reload($pathToVagrant);
     }
 
     /**
