@@ -70,6 +70,20 @@ class RoboFile extends \Robo\Tasks
      *
      * @return object Result
      */
+    public function vagrantHalt()
+    {
+        $result = $this->taskVagrantHalt()->run();
+        return $result;
+    }
+
+    /**
+     * Vagrant Help task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Status.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
     public function vagrantHelp($arg = '')
     {
         $result = $this->taskVagrantHelp()->arg($arg)->run();

@@ -16,6 +16,7 @@ trait loadTasks
                 'taskVagrantBox' => Box::class,
                 'taskVagrantDestroy' => Destroy::class,
                 'taskVagrantGlobalStatus' => GlobalStatus::class,
+                'taskVagrantHalt' => Halt::class,
                 'taskVagrantHelp' => Help::class,
                 'taskVagrantInit' => Init::class,
                 'taskVagrantProvision' => Provision::class,
@@ -50,6 +51,14 @@ trait loadTasks
      */
     protected function taskVagrantGlobalStatus($pathToVagrant = null) {
         return new GlobalStatus($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return Help
+     */
+    protected function taskVagrantHalt($pathToVagrant = null) {
+        return new Halt($pathToVagrant);
     }
 
     /**
