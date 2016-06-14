@@ -19,6 +19,18 @@ class Box extends Base
 {
     protected $action = 'box';
 
+    /**
+     * adds `box-info` option to vagrant
+     *
+     * @return $this
+     */
+    public function box-info()
+    {
+        $this->option('--box-info');
+
+        return $this;
+    }
+
     public function run()
     {
         $this->printTaskInfo('vagrant box' . $this->arguments);
