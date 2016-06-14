@@ -2,26 +2,26 @@
 namespace JoeStewart\Robo\Task\Vagrant;
 
 /**
- * Vagrant Box
+ * Vagrant Plugin
  *
  * ```php
  * <?php
  * // simple execution
- * $this->taskVagrantBox()->run();
+ * $this->taskVagrantPlugin()->run();
  *
  * // with custom path
- * $this->taskVagrantBox('path/to/my/vagrant')
+ * $this->taskVagrantPlugin('path/to/my/vagrant')
  *      ->run();
  * ?>
  * ```
  */
-class Box extends Base
+class Plugin extends Base
 {
-    protected $action = 'box';
+    protected $action = 'plugin';
 
     public function run()
     {
-        $this->printTaskInfo('vagrant box' . $this->arguments);
+        $this->printTaskInfo('vagrant plugin' . $this->arguments);
         return $this->executeCommand($this->getCommand());
     }
 }

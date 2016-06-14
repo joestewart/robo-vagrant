@@ -119,6 +119,20 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
+     * Vagrant Plugin task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Plugin.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
+    public function vagrantPlugin($arg = '')
+    {
+        $result = $this->taskVagrantPlugin()->arg($arg)->run();
+        return $result;
+    }
+
+    /**
      * Vagrant provision task.
      *
      * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Provision.php
