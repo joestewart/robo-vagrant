@@ -23,6 +23,7 @@ trait loadTasks
                 'taskVagrantPort' => Port::class,
                 'taskVagrantProvision' => Provision::class,
                 'taskVagrantReload' => Reload::class,
+                'taskVagrantResume' => Resume::class,
                 'taskVagrantSsh' => Ssh::class,
                 'taskVagrantSshConfig' => SshConfig::class,
                 'taskVagrantStatus' => Status::class,
@@ -50,7 +51,7 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Status
+     * @return GlobalStatus
      */
     protected function taskVagrantGlobalStatus($pathToVagrant = null) {
         return new GlobalStatus($pathToVagrant);
@@ -58,7 +59,7 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Help
+     * @return Halt
      */
     protected function taskVagrantHalt($pathToVagrant = null) {
         return new Halt($pathToVagrant);
@@ -98,7 +99,7 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Plugin
+     * @return Port
      */
     protected function taskVagrantPort($pathToVagrant = null) {
         return new Port($pathToVagrant);
@@ -114,10 +115,18 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Ssh
+     * @return Reload
      */
     protected function taskVagrantReload($pathToVagrant = null) {
         return new Reload($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return Resume
+     */
+    protected function taskVagrantResume($pathToVagrant = null) {
+        return new Resume($pathToVagrant);
     }
 
     /**
@@ -130,7 +139,7 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Ssh
+     * @return SshConfig
      */
     protected function taskVagrantSshConfig($pathToVagrant = null) {
         return new SshConfig($pathToVagrant);
@@ -146,7 +155,7 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Status
+     * @return Up
      */
     protected function taskVagrantUp($pathToVagrant = null) {
         return new Up($pathToVagrant);
@@ -154,7 +163,7 @@ trait loadTasks
 
     /**
      * @param null $pathToVagrant
-     * @return Status
+     * @return Version
      */
     protected function taskVagrantVersion($pathToVagrant = null) {
         return new Version($pathToVagrant);

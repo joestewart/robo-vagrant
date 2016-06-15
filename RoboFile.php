@@ -175,6 +175,20 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
+     * Vagrant resume task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Resume.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
+    public function vagrantResume($arg = '')
+    {
+        $result = $this->taskVagrantResume()->arg($arg)->run();
+        return $result;
+    }
+ 
+    /**
      * Vagrant ssh task.
      *
      * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Ssh.php
