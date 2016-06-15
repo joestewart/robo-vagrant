@@ -178,4 +178,4 @@ trait loadTasks
         return new Version($pathToVagrant);
     }
 
-} 
+}
