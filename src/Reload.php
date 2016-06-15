@@ -24,7 +24,7 @@ class Reload extends Base
      *
      * @return $this
      */
-    public function no_provision()
+    public function noProvision()
     {
         $this->option('--no-provision');
 
