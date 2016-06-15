@@ -70,9 +70,9 @@ class RoboFile extends \Robo\Tasks
      *
      * @return object Result
      */
-    public function vagrantHalt()
+    public function vagrantHalt($arg = '')
     {
-        $result = $this->taskVagrantHalt()->run();
+        $result = $this->taskVagrantHalt()->arg($arg)->run();
         return $result;
     }
 
@@ -227,6 +227,20 @@ class RoboFile extends \Robo\Tasks
     public function vagrantStatus()
     {
         $result = $this->taskVagrantStatus()->run();
+        return $result;
+    }
+
+    /**
+     * Vagrant Suspend task.
+     *
+     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Suspend.php
+     * @link https://packagist.org/packages/joestewart/robo-vagrant
+     *
+     * @return object Result
+     */
+    public function vagrantSuspend($arg = '')
+    {
+        $result = $this->taskVagrantSuspend()->arg($arg)->run();
         return $result;
     }
 
