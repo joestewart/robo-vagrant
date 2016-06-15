@@ -36,7 +36,7 @@ class Port extends Base
      *
      * @return $this
      */
-    public function machine_readable()
+    public function machineReadable()
     {
         $this->option('--machine-readable');
 

@@ -25,7 +25,7 @@ class VagrantTest extends \PHPUnit_Framework_TestCase
     public function testVagrantPortCommand()
     {
         $command = $this->taskVagrantPort('/usr/bin/vagrant')
-            ->machine_readable()
+            ->machineReadable()
             ->guest('22')
             ->getCommand();
         $expected = '/usr/bin/vagrant port --machine-readable --guest 22';
