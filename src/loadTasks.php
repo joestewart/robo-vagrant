@@ -19,6 +19,7 @@ trait loadTasks
                 'taskVagrantHalt' => Halt::class,
                 'taskVagrantHelp' => Help::class,
                 'taskVagrantInit' => Init::class,
+                'taskVagrantPackage' => Package::class,
                 'taskVagrantPlugin' => Plugin::class,
                 'taskVagrantPort' => Port::class,
                 'taskVagrantProvision' => Provision::class,
@@ -88,6 +89,14 @@ trait loadTasks
      */
     protected function taskVagrantListCommands($pathToVagrant = null) {
         return new ListCommands($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return Package
+     */
+    protected function taskVagrantPackage($pathToVagrant = null) {
+        return new Package($pathToVagrant);
     }
 
     /**

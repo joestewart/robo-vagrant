@@ -14,6 +14,7 @@ This package provides Robo tasks for the following vagrant commands:
      init            initializes a new Vagrant environment by creating a Vagrantfile
      plugin          manages plugins: install, uninstall, update, etc.
      port            displays information about guest port mappings
+     package         packages a running vagrant environment into a box
      provision       provisions the vagrant machine
      reload          restarts vagrant machine, loads new Vagrantfile configuration
      resume          resume a suspended vagrant machine

@@ -22,6 +22,18 @@ class VagrantTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testVagrantPackageCommand()
+    {
+        $command = $this->taskVagrantPackage('/usr/bin/vagrant')
+            ->base('base_name')
+            ->output('output_file')
+            ->includefile('include_file')
+            ->vagrantfile('vagrantfile_file')
+            ->getCommand();
+        $expected = '/usr/bin/vagrant package --base "base_name" --output "output_file" --include "include_file" --vagrantfile "vagrantfile_file"';
+        $this->assertEquals($expected, $command);
+    }
+
     public function testVagrantPortCommand()
     {
         $command = $this->taskVagrantPort('/usr/bin/vagrant')
