@@ -48,9 +48,8 @@ class RoboFile extends \Robo\Tasks
 ?>
 ```
 
-##Examples
+##Example
 
-Examples are also in the provided RoboFile.php
 
 ```    
     public function vagrantUp($arg = '')
@@ -58,6 +57,27 @@ Examples are also in the provided RoboFile.php
         $result = $this->taskVagrantUp()->arg($arg)->run();
         return $result;
     }
+```
+
+## Predefined Commands
+
+```
+<?php
+
+class RoboFile extends \Robo\Tasks
+{
+
+    use \JoeStewart\Robo\Task\Vagrant\loadTasks;
+    use \JoeStewart\Robo\Task\Vagrant\Command\Vagrant;
+    
+    ...
+    
+?>
+```
+
+Now list the avaliable commands using
+```
+./vendor/bin/robo list
 ```
 
 ##Credit
