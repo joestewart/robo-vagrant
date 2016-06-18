@@ -40,7 +40,7 @@ trait Vagrant
      *
      * @return object Result
      */
-    public function vagrantDestroy($arg = '')
+    public function vagrantDestroy()
     {
         $result = $this->taskVagrantDestroy()->force()->run();
         return $result;
