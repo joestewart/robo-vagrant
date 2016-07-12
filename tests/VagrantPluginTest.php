@@ -26,7 +26,7 @@ class VagrantTestPlugin extends \PHPUnit_Framework_TestCase
     public function testVagrantPluginListCommand()
     {
         $command = $this->taskVagrantPlugin('/usr/bin/vagrant')
-            ->listPlugins()
+            ->list()
             ->getCommand();
         $expected = '/usr/bin/vagrant plugin list';
         $this->assertEquals($expected, $command);

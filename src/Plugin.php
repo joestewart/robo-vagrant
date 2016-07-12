@@ -48,7 +48,7 @@ class Plugin extends Base
      *
      * @return $this
      */
-    public function listPlugins()
+    public function list()
     {
         $this->action = 'plugin list';
 
