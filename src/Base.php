@@ -3,6 +3,7 @@ namespace JoeStewart\Robo\Task\Vagrant;
 
 use Robo\Task\BaseTask;
 use Robo\Exception\TaskException;
+use Symfony\Component\Process\ExecutableFinder;
 
 abstract class Base extends BaseTask
 {
@@ -15,12 +16,9 @@ abstract class Base extends BaseTask
     {
         if ($pathToVagrant) {
             $this->command = $pathToVagrant;
-        } elseif (is_executable('/usr/bin/vagrant')) {
-            $this->command = '/usr/bin/vagrant';
-        } elseif (is_executable('/usr/local/bin/vagrant')) {
-            $this->command = '/usr/local/bin/vagrant';
         } else {
-            throw new TaskException(__CLASS__, "Executable not found.");
+            $finder = new ExecutableFinder();
+            $this->command = $finder->find('vagrant');
         }
     }
 
