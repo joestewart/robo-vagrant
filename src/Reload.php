@@ -43,6 +43,18 @@ class Reload extends Base
         return $this;
     }
 
+    /**
+     * adds `provision-with` option to vagrant provision
+     *
+     * @return $this
+     */
+    public function provisionWith($provisioners)
+    {
+        $this->option('--provision-with ' . $provisioners);
+
+        return $this;
+    }
+
     public function run()
     {
         $this->printTaskInfo('Vagrant reload: ' . $this->arguments);
