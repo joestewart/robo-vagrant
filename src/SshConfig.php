@@ -19,6 +19,18 @@ class SshConfig extends Base
 {
     protected $action = 'ssh-config';
 
+    /**
+     * adds `host` option to vagrant ssh-config
+     *
+     * @return $this
+     */
+    public function host($host_name = '')
+    {
+        $this->option('--host ' . $host_name);
+
+        return $this;
+    }
+
     public function run()
     {
         $this->printTaskInfo('vagrant ssh-config' . $this->arguments);
