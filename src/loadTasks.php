@@ -27,6 +27,7 @@ trait loadTasks
                 'taskVagrantResume' => Resume::class,
                 'taskVagrantSsh' => Ssh::class,
                 'taskVagrantSshConfig' => SshConfig::class,
+                'taskVagrantSnapshot' => Snapshot::class,
                 'taskVagrantStatus' => Status::class,
                 'taskVagrantSuspend' => Suspend::class,
                 'taskVagrantUp' => Up::class,
@@ -153,6 +154,14 @@ trait loadTasks
      */
     protected function taskVagrantSshConfig($pathToVagrant = null) {
         return new SshConfig($pathToVagrant);
+    }
+
+    /**
+     * @param null $pathToVagrant
+     * @return SshConfig
+     */
+    protected function taskVagrantSnapshot($pathToVagrant = null) {
+        return new Snapshot($pathToVagrant);
     }
 
     /**
