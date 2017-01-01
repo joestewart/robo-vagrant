@@ -21,266 +21,209 @@ trait Vagrant
     /**
      * Vagrant Box task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Box.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantBox($arg = '')
     {
-        $result = $this->taskVagrantBox()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantBox()->arg($arg)->run();
     }
 
     /**
      * Vagrant Destroy task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Destroy.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantDestroy()
     {
-        $result = $this->taskVagrantDestroy()->force()->run();
-        return $result;
+        $this->taskVagrantDestroy()->force()->run();
     }
 
     /**
      * Vagrant Global Status task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/GlobalStatus.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantGlobalStatus()
     {
-        $result = $this->taskVagrantGlobalStatus()->run();
-        return $result;
+        $this->taskVagrantGlobalStatus()->run();
     }
 
     /**
      * Vagrant Help task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Status.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantHalt($arg = '')
     {
-        $result = $this->taskVagrantHalt()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantHalt()->arg($arg)->run();
     }
 
     /**
      * Vagrant Help task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Status.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantHelp($arg = '')
     {
-        $result = $this->taskVagrantHelp()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantHelp()->arg($arg)->run();
     }
 
     /**
      * Vagrant Init task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Init.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantInit()
     {
-        $result = $this->taskVagrantInit()->run();
-        return $result;
+        $this->taskVagrantInit()->run();
     }
 
     /**
      * Vagrant List Commands task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/ListCommands.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantListCommands($arg = '')
     {
-        $result = $this->taskVagrantListCommands()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantListCommands()->arg($arg)->run();
     }
 
     /**
      * Vagrant Plugin task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Plugin.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantPlugin($arg = '')
     {
-        $result = $this->taskVagrantPlugin()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantPlugin()->arg($arg)->run();
     }
  
     /**
      * Vagrant Package task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Package.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantPackage($arg = '')
     {
-        $result = $this->taskVagrantPackage()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantPackage()->arg($arg)->run();
     }
 
     /**
      * Vagrant Port task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Port.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantPort()
     {
-        $result = $this->taskVagrantPort()->run();
-        return $result;
+        $this->taskVagrantPort()->run();
     }
 
     /**
      * Vagrant provision task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Provision.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantProvision()
     {
-        $result = $this->taskVagrantProvision()->run();
-        return $result;
+        $this->taskVagrantProvision()->run();
     }
 
     /**
      * Vagrant ssh task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Reload.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantReload()
     {
-        $result = $this->taskVagrantReload()->run();
-        return $result;
+        $this->taskVagrantReload()->run();
     }
 
     /**
      * Vagrant resume task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Resume.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantResume($arg = '')
     {
-        $result = $this->taskVagrantResume()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantResume()->arg($arg)->run();
     }
  
     /**
      * Vagrant ssh task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Ssh.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantSsh()
     {
-        $result = $this->taskVagrantSsh()->run();
-        return $result;
+        $this->taskVagrantSsh()->run();
     }
 
     /**
      * Vagrant ssh-config task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Ssh.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantSshConfig()
     {
-        $result = $this->taskVagrantSshConfig()->run();
-        return $result;
+        $this->taskVagrantSshConfig()->run();
     }
 
     /**
      * Vagrant Status task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Status.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantStatus()
     {
-        $result = $this->taskVagrantStatus()->run();
-        return $result;
+        $this->taskVagrantStatus()->run();
     }
 
     /**
      * Vagrant Suspend task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Suspend.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantSuspend($arg = '')
     {
-        $result = $this->taskVagrantSuspend()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantSuspend()->arg($arg)->run();
     }
 
     /**
      * Vagrant Up task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Up.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantUp($arg = '')
     {
-        $result = $this->taskVagrantUp()->arg($arg)->run();
-        return $result;
+        $this->taskVagrantUp()->arg($arg)->run();
     }
 
     /**
      * Vagrant Status task.
      *
-     * @see  https://github.com/joestewart/robo-vagrant/blob/master/src/Task/Vagrant/Version.php
      * @link https://packagist.org/packages/joestewart/robo-vagrant
      *
-     * @return object Result
      */
     public function vagrantVersion()
     {
-        $result = $this->taskVagrantVersion()->run();
-        return $result;
+        $this->taskVagrantVersion()->run();
     }
 }
