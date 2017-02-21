@@ -4,8 +4,9 @@ namespace JoeStewart\Robo\Task\Vagrant;
 use Robo\Task\BaseTask;
 use Robo\Exception\TaskException;
 use Symfony\Component\Process\ExecutableFinder;
+use Robo\Contract\CommandInterface;
 
-abstract class Base extends BaseTask
+abstract class Base extends BaseTask implements CommandInterface
 {
     use \Robo\Common\ExecOneCommand;
 

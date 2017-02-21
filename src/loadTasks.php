@@ -1,47 +1,15 @@
 <?php
 namespace JoeStewart\Robo\Task\Vagrant;
 
-use Robo\Container\SimpleServiceProvider;
-
 trait loadTasks 
 {
-
-    /**
-     * Return services.
-     */
-    public static function getVagrantServices()
-    {
-        return new SimpleServiceProvider(
-            [
-                'taskVagrantBox' => Box::class,
-                'taskVagrantDestroy' => Destroy::class,
-                'taskVagrantGlobalStatus' => GlobalStatus::class,
-                'taskVagrantHalt' => Halt::class,
-                'taskVagrantHelp' => Help::class,
-                'taskVagrantInit' => Init::class,
-                'taskVagrantPackage' => Package::class,
-                'taskVagrantPlugin' => Plugin::class,
-                'taskVagrantPort' => Port::class,
-                'taskVagrantProvision' => Provision::class,
-                'taskVagrantReload' => Reload::class,
-                'taskVagrantResume' => Resume::class,
-                'taskVagrantSsh' => Ssh::class,
-                'taskVagrantSshConfig' => SshConfig::class,
-                'taskVagrantSnapshot' => Snapshot::class,
-                'taskVagrantStatus' => Status::class,
-                'taskVagrantSuspend' => Suspend::class,
-                'taskVagrantUp' => Up::class,
-                'taskVagrantVersion' => Version::class,
-            ]
-        );
-    }
 
     /**
      * @param null $pathToVagrant
      * @return Box
      */
     protected function taskVagrantBox($pathToVagrant = null) {
-        return new Box($pathToVagrant);
+        return $this->task(Box::class, $pathToVagrant);
     }
 
     /**
@@ -49,7 +17,7 @@ trait loadTasks
      * @return Destroy
      */
     protected function taskVagrantDestroy($pathToVagrant = null) {
-        return new Destroy($pathToVagrant);
+        return $this->task(Destroy::class, $pathToVagrant);
     }
 
     /**
@@ -57,7 +25,7 @@ trait loadTasks
      * @return GlobalStatus
      */
     protected function taskVagrantGlobalStatus($pathToVagrant = null) {
-        return new GlobalStatus($pathToVagrant);
+        return $this->task(GlobalStatus::class, $pathToVagrant);
     }
 
     /**
@@ -65,7 +33,7 @@ trait loadTasks
      * @return Halt
      */
     protected function taskVagrantHalt($pathToVagrant = null) {
-        return new Halt($pathToVagrant);
+        return $this->task(Halt::class, $pathToVagrant);
     }
 
     /**
@@ -73,7 +41,7 @@ trait loadTasks
      * @return Help
      */
     protected function taskVagrantHelp($pathToVagrant = null) {
-        return new Help($pathToVagrant);
+        return $this->task(Help::class, $pathToVagrant);
     }
 
     /**
@@ -81,7 +49,7 @@ trait loadTasks
      * @return Init
      */
     protected function taskVagrantInit($pathToVagrant = null) {
-        return new Init($pathToVagrant);
+        return $this->task(Init::class, $pathToVagrant);
     }
 
     /**
@@ -89,7 +57,7 @@ trait loadTasks
      * @return ListCommands
      */
     protected function taskVagrantListCommands($pathToVagrant = null) {
-        return new ListCommands($pathToVagrant);
+        return $this->task(ListCommands::class, $pathToVagrant);
     }
 
     /**
@@ -97,7 +65,7 @@ trait loadTasks
      * @return Package
      */
     protected function taskVagrantPackage($pathToVagrant = null) {
-        return new Package($pathToVagrant);
+        return $this->task(Package::class, $pathToVagrant);
     }
 
     /**
@@ -105,7 +73,7 @@ trait loadTasks
      * @return Plugin
      */
     protected function taskVagrantPlugin($pathToVagrant = null) {
-        return new Plugin($pathToVagrant);
+        return $this->task(Plugin::class, $pathToVagrant);
     }
 
     /**
@@ -113,7 +81,7 @@ trait loadTasks
      * @return Port
      */
     protected function taskVagrantPort($pathToVagrant = null) {
-        return new Port($pathToVagrant);
+        return $this->task(Port::class, $pathToVagrant);
     }
 
     /**
@@ -121,7 +89,7 @@ trait loadTasks
      * @return Provision
      */
     protected function taskVagrantProvision($pathToVagrant = null) {
-        return new Provision($pathToVagrant);
+        return $this->task(Provision::class, $pathToVagrant);
     }
 
     /**
@@ -129,7 +97,7 @@ trait loadTasks
      * @return Reload
      */
     protected function taskVagrantReload($pathToVagrant = null) {
-        return new Reload($pathToVagrant);
+        return $this->task(Reload::class, $pathToVagrant);
     }
 
     /**
@@ -137,7 +105,7 @@ trait loadTasks
      * @return Resume
      */
     protected function taskVagrantResume($pathToVagrant = null) {
-        return new Resume($pathToVagrant);
+        return $this->task(Resume::class, $pathToVagrant);
     }
 
     /**
@@ -145,7 +113,7 @@ trait loadTasks
      * @return Ssh
      */
     protected function taskVagrantSsh($pathToVagrant = null) {
-        return new Ssh($pathToVagrant);
+        return $this->task(Ssh::class, $pathToVagrant);
     }
 
     /**
@@ -153,7 +121,7 @@ trait loadTasks
      * @return SshConfig
      */
     protected function taskVagrantSshConfig($pathToVagrant = null) {
-        return new SshConfig($pathToVagrant);
+        return $this->task(SshConfig::class, $pathToVagrant);
     }
 
     /**
@@ -161,7 +129,7 @@ trait loadTasks
      * @return SshConfig
      */
     protected function taskVagrantSnapshot($pathToVagrant = null) {
-        return new Snapshot($pathToVagrant);
+        return $this->task(Snapshot::class, $pathToVagrant);
     }
 
     /**
@@ -169,7 +137,7 @@ trait loadTasks
      * @return Status
      */
     protected function taskVagrantStatus($pathToVagrant = null) {
-        return new Status($pathToVagrant);
+        return $this->task(Status::class, $pathToVagrant);
     }
 
     /**
@@ -177,7 +145,7 @@ trait loadTasks
      * @return Suspend
      */
     protected function taskVagrantSuspend($pathToVagrant = null) {
-        return new Suspend($pathToVagrant);
+        return $this->task(Suspend::class, $pathToVagrant);
     }
 
     /**
@@ -185,7 +153,7 @@ trait loadTasks
      * @return Up
      */
     protected function taskVagrantUp($pathToVagrant = null) {
-        return new Up($pathToVagrant);
+        return $this->task(Up::class, $pathToVagrant);
     }
 
     /**
@@ -193,7 +161,7 @@ trait loadTasks
      * @return Version
      */
     protected function taskVagrantVersion($pathToVagrant = null) {
-        return new Version($pathToVagrant);
+        return $this->task(Version::class, $pathToVagrant);
     }
 
 }
