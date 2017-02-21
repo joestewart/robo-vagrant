@@ -6,7 +6,7 @@ use Symfony\Component\Console\Output\NullOutput;
 use Robo\TaskAccessor;
 use Robo\Robo;
 
-class VagrantTest extends \PHPUnit_Framework_TestCase implements ContainerAwareInterface
+class VagrantTest extends \PHPUnit\Framework\TestCase implements ContainerAwareInterface
 {
     use \JoeStewart\Robo\Task\Vagrant\loadTasks;
     use TaskAccessor;
