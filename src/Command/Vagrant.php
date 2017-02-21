@@ -10,7 +10,6 @@ trait Vagrant
         $this->stopOnFail(true);
         $this->taskPhpUnit()
             ->option('disallow-test-output')
-            ->option('report-useless-tests')
             ->option('strict-coverage')
             ->option('-v')
             ->option('-d error_reporting=-1')
