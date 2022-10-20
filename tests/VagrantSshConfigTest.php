@@ -5,15 +5,17 @@ use League\Container\ContainerAwareTrait;
 use Symfony\Component\Console\Output\NullOutput;
 use Robo\TaskAccessor;
 use Robo\Robo;
+use Robo\Collection\CollectionBuilder;
+use PHPUnit\Framework\TestCase;
 
-class VagrantTestSshConfig extends \PHPUnit\Framework\TestCase implements ContainerAwareInterface
+class VagrantSshConfigTest extends \PHPUnit\Framework\TestCase implements ContainerAwareInterface
 {
     use \JoeStewart\Robo\Task\Vagrant\loadTasks;
     use TaskAccessor;
     use ContainerAwareTrait;
 
     // Set up the Robo container so that we can create tasks in our tests.
-    function setup()
+    function setup(): void
     {
         $container = Robo::createDefaultContainer(null, new NullOutput());
         $this->setContainer($container);
@@ -23,7 +25,7 @@ class VagrantTestSshConfig extends \PHPUnit\Framework\TestCase implements Contai
     public function collectionBuilder()
     {
         $emptyRobofile = new \Robo\Tasks;
-        return $this->getContainer()->get('collectionBuilder', [$emptyRobofile]);
+        return CollectionBuilder::create($this->getContainer(), $emptyRobofile);
     }
 
     public function testVagrantSshConfigCommand()
